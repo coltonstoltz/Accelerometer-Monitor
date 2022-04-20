@@ -1,0 +1,28 @@
+/*Sequence of instructions to send via SPI to accelerometer to initialize it*/
+0A1F52 // Soft Reset of Accelerometer
+0A1F00 // Clear Reset Command
+0A2D02 // 
+0A2C14 // 
+0B0800 // Read X-Axis data
+0B0900 // Read Y-Axis data
+0B0A00 // Read Z-Axis data
+/*
+0A20FA // Threshold set at 250 mg, lower bits
+0A2100 // Threshold set at 250 mg, upper bits
+0A2200 // 
+0A2396 // Threshold set at 150 mg, lower bits
+0A2400 // Threshold set at 150 mg, upper bits
+0A2500 //
+0A2600 //
+0A273F // Loop Mode, Enable Activity/Inactivity Detection in Referenced ModeS
+0A280B // Set above half, no temp., FIFO mode = Triggered
+0A29FF // FIFO watermark set to 511 samples
+0A2A04 // Int1 set for FIFO watermark
+0A2B10 // Int2 set for Activity 
+0A2C10 // Set for +/- 2 range and 12.5 Hz ODR
+0A2D0E // Measurement Mode, Autosleep enabled, Wakeup enabled
+0B0800 // Read X-Axis data
+0B0900 // Read Y-Axis data
+0B0A00 // Read Z-Axis data
+0B0B00 // Read status register
+*/
